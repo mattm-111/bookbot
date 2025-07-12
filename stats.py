@@ -16,6 +16,33 @@ def char_count(book_path):
             char_list[c] = 1
     return char_list
 
+def sort_list(list):
+    return list["num"]
+
+
+def char_list_pair(book_path):
+    new_list = []
+    for c, v in char_count(book_path).items():
+        if c.isalpha() == True:
+            staged_dict = {}
+            staged_dict["char"] = c
+            staged_dict["num"] = v
+            new_list.append(staged_dict)
+        new_list.sort(reverse=True, key=sort_list)
+    return new_list
+
+
+   
+    
+
+
+    
+   
+    
+
+
+
+
 
     
 
